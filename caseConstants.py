@@ -8,4 +8,5 @@ ENCRYPTION_KEY = "hardwork is always better than smartwork."
 
 MY_JOURNAL = 1
 NEW_JOURNAL = 2
+
 EXIT = None

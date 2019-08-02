@@ -11,13 +11,18 @@ def welcomeScreen():
         except:
             return -1
 
+
 def wrongChoice():
     print("Wrong Choice !!\nShutting Down...")
+
 
 def wrongChoiceEnterAgain():
     print("Wrong Choice !!\nEnter Your Choice Again...")
 
+
 def invalidUser():
     print("Wrong E-mail ID or Password !!!")
+
+
 def userLimitExceeded():
     print("Cannot Create More Users !!!")

@@ -1,7 +1,7 @@
 import re
 
 """
- * Encryption Algorithm ~Ankit Agrawal ( 161500085 )
+ * Encryption Algorithm ~Ankit Agrawal
  * Step 0: If key contains chars, call convertToNumericKey() to convert key into numerical key
  * Step 1: Take ascii value of each char
  * Step 2: Convert it to binary
