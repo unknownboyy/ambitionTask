@@ -1,6 +1,6 @@
-from welcomeUtils import welcomeScreen, wrongChoice, invalidUser
+from welcomeUtils import welcomeScreen, wrongChoice, invalidUser, userLimitExceeded
 from caseConstants import LOGIN, SIGNUP, EXIT
-from loginUtils import login, signup
+from loginUtils import login, signup, canCreateMoreUser
 from menuUtils import menu
 
 choice = None
@@ -14,8 +14,11 @@ if choice == LOGIN:
         menu(user)
 
 elif choice == SIGNUP:
-    user = signup()
-    menu(user)
+    if canCreateMoreUser():
+        user = signup()
+        menu(user)
+    else:
+        userLimitExceeded()
 
 elif choice == EXIT:
     print("See You Later...")

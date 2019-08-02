@@ -60,6 +60,15 @@ def saveNewJournal(user,journal):
     file_data = open(JOURNAL_FILE,"w")
     user_journals = journals.get(user,[])
     user_journals.append({"TITLE":journal[0],"LOGS":journal[1]})
+    if len(user_journals)>50:
+        user_journals.pop(0)
     journals[user] = user_journals
     json.dump(journals,file_data)
     file_data.close()
+
+def reachedUserLimit():
+    ensureUsersFile()
+    file_data = open(LOGIN_FILE,"r")
+    users = json.load(file_data)
+    file_data.close()
+    return len(users)<10

@@ -19,3 +19,5 @@ def wrongChoiceEnterAgain():
 
 def invalidUser():
     print("Wrong E-mail ID or Password !!!")
+def userLimitExceeded():
+    print("Cannot Create More Users !!!")

@@ -1,5 +1,5 @@
 from getpass import getpass
-from fileUtils import getUser, setUser
+from fileUtils import getUser, setUser, reachedUserLimit
 
 def getCredentials():
     email = input("Enter Your E-mail:")
@@ -14,3 +14,6 @@ def signup():
     email,password = getCredentials()
     setUser(email,password)
     return email
+
+def canCreateMoreUser():
+    return reachedUserLimit()
